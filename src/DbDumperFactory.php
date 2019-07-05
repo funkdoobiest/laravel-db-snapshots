@@ -45,6 +45,10 @@ class DbDumperFactory
             return new MySql();
         }
 
+        if ($driver === 'mariadb') {
+            return new MySql();
+        }
+
         if ($driver === 'pgsql') {
             return (new PostgreSql())->useInserts();
         }
